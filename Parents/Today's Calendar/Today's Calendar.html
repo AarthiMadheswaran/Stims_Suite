@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		dyCalendar
+	</title>
+	<link rel="stylesheet" type="text/css" href="E:\project\school\Today's Calendar\dycalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="E:\project\school\Today's Calendar\dycalendar.css">
+</head>
+<body>
+<h1>Calendar</h1>
+<div class="some-class">
+	<div id="calendar" class="dycalendar-container">	
+	</div>
+</div>
+<script src="E:\project\school\Today's Calendar\dycalendar.min.js"></script>
+<div id="dycalendar-prev-next-button-with-skin-shadow" class="dycalendar-container skin-purple shadow-default"></div>
+<script >
+	dycalendar.draw({
+	target: '#dycalendar-prev-next-button-with-skin-shadow',
+     type: 'month',
+     prevnextbutton : "show",
+     highlighttoday:true
+	});
+</script>
+</body>
+</html>

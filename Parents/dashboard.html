@@ -2,29 +2,36 @@
 <html>
 <head>
 	<title>Dashboard</title>
+ <link href="school/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"> 
   </script>	
   <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/components/grid.min.css">
+  <link rel="stylesheet" type="text/css" href="E:\project\school\Today's Calendar\dycalendar.min.css">
+  <link rel="stylesheet" type="text/css" href="E:\project\school\Today's Calendar\dycalendar.css"
   <style type="text/css">
 
   </style>
 </head>
 <body>
-<div class="ui attached stackable menu" style="margin-top: 10px; max-width:100%;">
+<div class="ui attached stackable menu" style="margin-top: 10px; max-width:90%; margin-left: 10px;">
   <div class="ui container">
     <a class="green item">
       <i class="home icon"></i> Home
     </a>
-    <a class="item">
+    <a href="parentdashboard-teacher.html" class="item">
       <i class="users icon"></i> Teacher
     </a>
     <a class="item">
       <i class="child icon"></i> child
     </a>
-     <a class="item">
+     <a href="parentdashboard-transport.html" class="item">
       <i class="bus icon"></i> Transport
     </a>
       <a class="item">
@@ -45,18 +52,61 @@
   </div>
 </div>
 </div>
-<div class="ui secondary pointing menu">
-  <a class="item active">
- Management
-  </a>
-  <a class="item">
-    Event
-  </a>
-  <a class="item">
-feedback
-  </a>
+<div class="ui message" style="width:30%; padding-left: 10px; margin-left: 15px; margin-left:820px;">
+  <div class="header">
+   TODAYS NEWS
+  </div>
+  <p><marquee> our school conducting health awarness program on 10.am tp 4.pm </marquee> </p>
 </div>
-<div class="ui segment">
-  <p></p>
+<div class = "panel panel-primary" style="width:20%; height: 50%; float: right; margin:10px 120px; margin-top: 10px;">
+   <div class = "panel-heading">
+      <h3 class = "panel-title">Calender</h3>
+   </div>
+   
+   <div class = "panel-body">
+<div class="some-class">
+  <div id="calendar" class="dycalendar-container">  
+  </div>
 </div>
+<script src="E:\project\school\Today's Calendar\dycalendar.min.js"></script>
+<div id="dycalendar-prev-next-button-with-skin-shadow" class="dycalendar-container skin-purple shadow-default">
+  </div>
+  </div>
+  </div>
+<div class="ui styled accordion" style="margin-left:10px; margin-top:10px; ">
+  <div class="active title">
+    <i class="dropdown icon"></i>
+   yearly activity
+  </div>
+  <div class="active content">
+    <p>jan-conducting hillario </p>
+     <p>feb-conducting pongal festivel</p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+  incharge persons
+  </div>
+  <div class="content">
+    <p>saroja-dpt of cs <br/> contact-1234455 </p>
+    <p>jagadish-dpt of cs <br/> contact-1234455 </p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+   management heads
+  </div>
+  <div class="content">
+    <p>jagadish</p>
+    <p>siva kumar</p>
+  </div>
+</div>
+<script >
+  dycalendar.draw({
+  target: '#dycalendar-prev-next-button-with-skin-shadow',
+     type: 'month',
+     prevnextbutton : "show",
+     highlighttoday:true
+  });
+  $('.ui.accordion').accordion();
+</script>
 </body>
+</html>
